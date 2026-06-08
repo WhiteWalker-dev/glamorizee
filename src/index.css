@@ -1,21 +1,121 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-  }
-  .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-  .hairline-border { border: 1px solid #E8DDD4; }
-  .lux-button {
-    background-color: #222222;
-    color: #FAF8F5;
-    text-transform: uppercase;
-    border-radius: 0;
-    padding: 12px 24px;
-    transition: transform 0.3s ease;
-  }
-  .lux-button:hover { transform: scale(1.02); }
-  .image-overlay { background: rgba(34, 34, 34, 0.1); }
+@theme {
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary-fixed-dim: #e2c195;
+  --color-primary-container: #faf8f5;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-surface-container-high: #f1e6dd;
+  --color-inverse-surface: #352f29;
+  --color-on-primary-container: #727270;
+  --color-on-error: #ffffff;
+  --color-background: #fff8f4;
+  --color-on-secondary-fixed: #1b1c1c;
+  --color-on-tertiary-container: #886d47;
+  --color-primary: #5e5e5c;
+  --color-on-tertiary-fixed-variant: #594320;
+  --color-outline-variant: #c5c7c1;
+  --color-tertiary: #735a36;
+  --color-outline: #757873;
+  --color-on-secondary-container: #636262;
+  --color-surface-container-low: #fdf2e8;
+  --color-surface-variant: #ece1d7;
+  --color-inverse-primary: #c8c6c4;
+  --color-surface-container: #f7ece3;
+  --color-tertiary-container: #fff7f1;
+  --color-secondary: #5f5e5e;
+  --color-on-primary-fixed-variant: #474745;
+  --color-on-background: #201b15;
+  --color-primary-fixed: #e4e2df;
+  --color-error-container: #ffdad6;
+  --color-inverse-on-surface: #faefe5;
+  --color-surface: #fff8f4;
+  --color-on-tertiary-fixed: #281800;
+  --color-on-primary-fixed: #1b1c1a;
+  --color-tertiary-fixed: #ffddb0;
+  --color-surface-tint: #5e5e5c;
+  --color-surface-container-highest: #ece1d7;
+  --color-on-surface-variant: #454843;
+  --color-on-error-container: #93000a;
+  --color-surface-dim: #e3d8cf;
+  --color-primary-fixed-dim: #c8c6c4;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-secondary-fixed: #e5e2e1;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-surface-bright: #fff8f4;
+  --color-error: #ba1a1a;
+  --color-on-surface: #201b15;
+  --color-secondary-container: #e2dfde;
+  --color-on-primary: #ffffff;
+
+  --spacing-section-gap: 80px;
+  --spacing-margin-desktop: 64px;
+  --spacing-base: 8px;
+  --spacing-margin-mobile: 16px;
+  --spacing-gutter: 24px;
+  --spacing-container-padding: 40px;
+
+  --font-label-md: Montserrat, sans-serif;
+  --font-label-lg: Montserrat, sans-serif;
+  --font-headline-lg: "Playfair Display", serif;
+  --font-display-md: "Playfair Display", serif;
+  --font-body-md: Montserrat, sans-serif;
+  --font-headline-lg-mobile: "Playfair Display", serif;
+  --font-body-lg: Montserrat, sans-serif;
+  --font-display-lg: "Playfair Display", serif;
+}
+
+@utility hairline-border {
+  border: 1px solid #E8DDD4;
+}
+
+@utility hairline-border-dark {
+  border: 1px solid #222222;
+}
+
+@utility hairline-top {
+  border-top: 1px solid #E8DDD4;
+}
+
+@utility text-shadow-subtle {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+@utility text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@utility image-overlay {
+  background: rgba(34, 34, 34, 0.1);
+}
+
+@utility image-overlay-gradient {
+  background: linear-gradient(to top, rgba(34, 34, 34, 0.6) 0%, rgba(34, 34, 34, 0) 60%);
+}
+
+@utility bg-backdrop-blur {
+  backdrop-filter: blur(8px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.lux-button {
+  background-color: #222222;
+  color: #FAF8F5;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  font-family: var(--font-label-lg);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+.lux-button:hover {
+  background-color: #c8a97e;
+  color: #ffffff;
 }

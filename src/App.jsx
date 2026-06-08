@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -15,10 +15,11 @@ import AllCategories from './pages/AllCategories';
 import Atelier from './pages/Atelier';
 import ContactUs from './pages/ContactUs';
 import Editorial from './pages/Editorial';
+import InfoPages from './pages/InfoPages';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -33,9 +34,10 @@ function App() {
         <Route path="/atelier" element={<Atelier />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/editorial" element={<Editorial />} />
+        <Route path="/info/:topic" element={<InfoPages />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
